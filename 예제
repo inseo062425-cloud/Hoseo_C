@@ -1,0 +1,153 @@
+* 실습1(산술,형변환 연산자)
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    float a,b,c,d,A,B;
+
+    printf("\n 4개의 양의 정수 입력:");
+    scanf("%f %f %f %f",&a,&b,&c,&d);
+
+    printf("\n 4개의 양의 정수:%f %f %f %f",a,b,c,d);
+
+    A = (a+b+c+d)/4;
+    printf("\n 4개의 양의 정수 평균값: A = %.3f",A);
+
+    B = ((a-A)*(a-A)+(b-A)*(b-A)+(c-A)*(c-A)+(d-A)*(d-A))/3;
+    printf("\n 4개의 양의 정수 분산값: B = %.3f",B);
+    return 0;
+} 
+*/
+/* 실습문제2
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int int_part;
+    float f,frac_part;
+    
+    printf("\n 실수 f 입력:");
+    scanf("%f",&f);
+    
+    printf("\n f = %f인 경우 출력",f);
+    int_part = (int)f;
+    frac_part = f- int_part;
+
+    printf("\n %.3f:%s,소수부값:%.3f",f,
+    (frac_part !=0.0f) ? "실수":"정수",frac_part);
+    return 0;
+} */
+/* 실습문제 4
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,A,B,C;
+
+    printf("\n 3명의 시험 점수:");
+    scanf("%d %d %d",&a,&b,&c);
+
+    printf("\n 3명 학생의 시험점수:%d %d %d",a,b,c);
+    A= (a<0)? -a:a,(b<0)? -b:b,(c<0)? -c:c ;
+    printf("\n 절댓값: %d %d %d",A);
+    B = (a+b+c)/3;
+    printf("\n 평균값:%d",B);
+    C = ((a-B)*(a-B)+(b-B)*(b-B)+(c-B)*(c-B))/2;
+    printf("\n 분산값:%d",C);
+    return 0;
+
+} */
+/* 실습문제 2
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int m,n;
+
+    printf("\n m,n 입력:");
+    scanf("%d %d",&m,&n);
+
+    printf("\n m = %d, n = %d 일 경우 출력",m,n);
+    m%2==0 ? printf("\n %d는 짝수이며 ",m):printf("\n %d는 홀수이며",m);
+    m%n==0 ? printf("\n %d의 배수입니다",n):printf("\n %d의 배수가 아닙니다",n);
+    return 0;
+
+} */
+/* 실습문제3-1
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int n,odd=0,even=0;
+    int d1,d2,d3,d4,d5,d6;
+    
+    printf("\n 6자리 이하 양의 정수 n 입력:");
+    scanf("%d",&n);
+
+    d1 = n % 10;
+    (n >= 1) ? ((d1 % 2 ==0)? even++:odd++):0;
+
+    d2 = (n/10)%10;
+    (n >= 10) ? ((d2 % 2 ==0)? even++:odd++):0;
+
+    d3 = (n/100)%10;
+    (n >= 100) ? ((d3 % 2 ==0)? even++:odd++):0;
+
+    d4 = (n/1000)%10;
+    (n>=1000) ? ((d4 % 2==0)? even++:odd++):0;
+
+    d5 = (n/10000)%10;
+    (n>=10000)? ((d5 %2==0)? even++:odd++):0; 
+
+    d6 = (n/100000)%10;
+    (n >= 100000)? ((d6 %2==0)? even++:odd++):0;
+
+    printf("\n n = %d ",n);
+    printf("\n 홀수 발생 빈도: %d",odd);
+    printf("\n 짝수 발생 빈도:%d",even);
+    printf("\n 홀수 발생빈도(%d)%s 짝수 발생빈도(%d)",
+        odd,(odd>even)? ">" :(odd<even)? "<": "=",even);
+        return 0;
+    } */
+#define _CRT_SECURE_NO_SWARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int s1,s2,s3,s4; /*학생점수*/
+    int a1,a2,a3,a4; /*절댓값*/
+    int min,min_1,min_2,max,max_1,max_2,abs; /*최소,최대,절댓값*/
+    float mean,var; /*평균,분산*/
+    
+
+    printf("\n 학생점수 입력(-100~+100):");
+    scanf("%d %d %d %d",&s1,&s2,&s3,&s4);
+    
+    a1 = (s1<0)? -s1:s1;
+    a2 = (s2<0)? -s2:s2;
+    a3 = (s3<0)? -s3:s3;
+    a4 = (s4<0)? -s4:s4;
+    printf("\n 시험 점수 절댓값:%d %d %d %d",a1,a2,a3,a4);
+
+    max_1 = (a1 > a2) ? a1 : a2;
+    max_2 = (a3 > a4) ? a3 : a4;
+    max = max_1 > max_2 ? max_1 : max_2;
+    printf("\n 최대값:%d",max);
+
+    min_1 = (a1 <a2) ? a1 : a2;
+    min_2 = (a3< a4) ? a3 : a4;
+    min = min_1 < min_2 ? min_1 : min_2;
+    printf("\n 최소값: %d",min);
+
+    mean = (s1+s2+s3+s4)/ 4.0;
+    printf("\n 평균값: %.2f",mean);
+
+    var = ((s1-mean)*(s1-mean)+(s2-mean)*(s2-mean)+(s3-mean)*(s3-mean)+(s4-mean)*(s4-mean))/3.0;
+    printf("\n 분산값: %.2f",var);
+    return 0;
+}
