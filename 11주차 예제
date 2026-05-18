@@ -1,0 +1,152 @@
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	float a, b, c, d, e;
+	float abs_a, abs_b, abs_c, abs_d, abs_e,tmp;
+
+	printf("\n 5개의 실수 입력(소수 이하 1자리):");
+	scanf("%f %f %f %f %f", &a, &b, &c, &d, &e);
+	printf("\n 입력 데이터:%f %f %f %f %f", a, b, c, d, e);
+
+	//절댓값
+	abs_a = ((a < 0) ? -a : a);
+	abs_b = ((b < 0) ? -b : b);
+	abs_c = ((c < 0) ? -c : c);
+	abs_d = ((d < 0) ? -d : d);
+	abs_e = ((e < 0) ? -e : e);
+
+	 //첫번째
+	if (abs_a < abs_b)
+	{
+		tmp = abs_a; abs_a = abs_b; abs_b = tmp;
+	}
+	if (abs_a < abs_c)
+	{
+		tmp = abs_a; abs_a = abs_c; abs_c = tmp;
+	}
+	if (abs_a < abs_d)
+	{
+		tmp = abs_a; abs_a = abs_d; abs_d = tmp;
+	}
+	if (abs_a < abs_e)
+	{
+		tmp = abs_a; abs_a = abs_e; abs_e = tmp;
+	}
+	
+	//두번째
+	if (abs_b < abs_c)
+	{
+		tmp = abs_b; abs_b = abs_c; abs_c = tmp;
+	}
+	if (abs_b < abs_d)
+	{
+		tmp = abs_b; abs_b = abs_d;  abs_d = tmp;
+	}
+	if (abs_b < abs_e)
+	{
+		tmp = abs_b; abs_b = abs_e; abs_e = tmp;
+	}
+
+	//세번째
+	if (abs_c < abs_d)
+	{
+		tmp = abs_c; abs_c = abs_d; abs_d = tmp;
+	}
+	if (abs_c < abs_e)
+	{
+		tmp = abs_c; abs_c = abs_e; abs_e = tmp;
+	}
+
+	//4,5번째
+	if (abs_d < abs_e)
+	{
+		tmp = abs_d; abs_d = abs_e; abs_e = tmp;
+	}
+	
+	printf("\n 정렬 데이터: %.1f,%.1f,%.1f,%.1f,%.1f",abs_a,abs_b,abs_c,abs_d,abs_e);
+	printf("\n 최대값: %.1f",abs_a);
+	printf("\n 중간값: %.1f",abs_c);
+	printf("\n 최소값: %.1f",abs_e);
+
+	return 0;
+
+} */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	float a, b, c, d, e;
+	float abs_a, abs_b, abs_c, abs_d, abs_e, tmp;
+
+	printf("\n 5개의 실수 입력(소수 이하 1자리):");
+	scanf("%f %f %f %f %f", &a, &b, &c, &d, &e);
+	printf("\n 입력 데이터:%f %f %f %f %f", a, b, c, d, e);
+
+	//절댓값
+	abs_a = ((a < 0) ? -a : a);
+	abs_b = ((b < 0) ? -b : b);
+	abs_c = ((c < 0) ? -c : c);
+	abs_d = ((d < 0) ? -d : d);
+	abs_e = ((e < 0) ? -e : e);
+
+	//첫번째
+	if (abs_a > abs_b)
+	{
+		tmp = abs_a; abs_a = abs_b; abs_b = tmp;
+	}
+	if (abs_a > abs_c)
+	{
+		tmp = abs_a; abs_a = abs_c; abs_c = tmp;
+	}
+	if (abs_a > abs_d)
+	{
+		tmp = abs_a; abs_a = abs_d; abs_d = tmp;
+	}
+	if (abs_a > abs_e)
+	{
+		tmp = abs_a; abs_a = abs_e; abs_e = tmp;
+	}
+
+	//두번째
+	if (abs_b > abs_c)
+	{
+		tmp = abs_b; abs_b = abs_c; abs_c = tmp;
+	}
+	if (abs_b > abs_d)
+	{
+		tmp = abs_b; abs_b = abs_d;  abs_d = tmp;
+	}
+	if (abs_b > abs_e)
+	{
+		tmp = abs_b; abs_b = abs_e; abs_e = tmp;
+	}
+
+	//세번째
+	if (abs_c > abs_d)
+	{
+		tmp = abs_c; abs_c = abs_d; abs_d = tmp;
+	}
+	if (abs_c > abs_e)
+	{
+		tmp = abs_c; abs_c = abs_e; abs_e = tmp;
+	}
+
+	//4,5번째
+	if (abs_d > abs_e)
+	{
+		tmp = abs_d; abs_d = abs_e; abs_e = tmp;
+	}
+
+	printf("\n 정렬 데이터: %.1f,%.1f,%.1f,%.1f,%.1f", abs_a, abs_b, abs_c, abs_d, abs_e);
+	printf("\n 최대값: %.1f", abs_e);
+	printf("\n 중간값: %.1f", abs_c);
+	printf("\n 최소값: %.1f", abs_a);
+
+	return 0;
+
+}
