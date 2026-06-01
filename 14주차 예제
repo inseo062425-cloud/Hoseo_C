@@ -1,0 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+double a, b, c, d, e;
+double average_value,deviation_value;
+double input();
+double average();
+double deviation();
+
+
+int main()
+{
+	double average_value, deviation_value;
+	double a, b, c, d, e;
+	a = input();
+	b = input();
+	c = input();
+	d = input();
+	e = input();
+
+	printf("\n 평균값:%.3f", average_value);
+	printf("\n 분산값:%.3f", deviation_value);
+}
+
+double input()
+{
+	printf("시험점수 입력(실수값,5개): ");
+	scanf("%f %f %f %f %f", &a, &b, &c, &d, &e);
+}
+
+double average()
+{
+	average_value = (a + b + c + d + e) / 5;
+}
+
+double deviation()
+{
+	deviation_value = ((a - average_value) * (a - average_value) +
+		(b - average_value) * (b - average_value) +
+		(c - average_value) * (c - average_value) +
+		(d - average_value) * (d - average_value) +
+		(e - average_value) * (e - average_value)) / 4;
+}
+
