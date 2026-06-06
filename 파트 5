@@ -1,0 +1,462 @@
+/* while = 조건식이 참인 경우 실행
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+int num = 0;
+
+while (num < 5) //조건식이 참인 경우 실행
+{
+    printf("\n 반복내용: %d",num);
+    num++;
+}
+printf("\n 반복문을 종료한 후 :%d",num);
+return 0;
+} 
+*/
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i=0,sum=0;
+
+    while (i <+10)
+    {
+        sum = sum + i;
+        printf("\n i = %d,sum = %d",i,sum);
+        i++;
+    }
+
+    printf("\n 반복문을 종료한 후 :i = %d ,sum = %d",i,sum );
+    return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i = 0;
+
+    while(1)//무한루프-항상 조건식이 참
+    {
+        printf("\n 반복 횟수:%d",i);
+        i++;
+
+        if ( i > 10 )
+            break; //조건식 참이면 반복문 탈출
+    }
+
+    printf("\n 반복문을 종료한 후 :i = %d",i);
+    return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i = 2;
+    int j = 1;
+    int result = 0;
+
+    while ( i < 10)
+    {
+        while (j <10)
+        {
+            result = i*j;
+            printf("\n %d *%d = %d",i,j,result);
+            j++;
+        }
+        i++;
+        j = 1; //내부 반복문이 끝나면 j값 초기화
+    
+    }
+    printf("\n 반복문을 종료한 후:i = %d,j = %d,result = %d",i,j,result);
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num = 0,j = 9,result = 0;
+    printf("\n 숫자를 입력하세요:");
+    scanf("%d",&num);
+
+    while ( num > 0 )
+    {
+        while ( j > 0)
+        {
+            result = num * j;
+            printf("\n %d * %d = %d",num,j,result);
+            j--;
+        }
+        num--;
+        j = 9; //내부 반복문이 끝나면 j값 초기화
+        printf("\n ------------------");
+    }
+    return 0;
+} */
+/* //for은 정해진 횟수만큼 반복할때 사용
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+int num;
+
+for (num =0; num < 5; num++) // (초기식; 조건식; 증감식)
+{
+    printf("\n 반복내용:%d",num);
+
+}
+printf("\n 반복문을 종료한 후:%d",num);
+return 0;
+} */
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i,sum = 0;
+
+    for ( i = 0; i <= 10; i++)
+    {
+        sum = sum + i;
+        printf("\n i = %d,sum = %d",i,sum);
+    }
+    printf("\n -----반복문 종료-----");
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num = 0,i,result = 0;
+
+    printf("\n 숫자를 입력하세요:");
+    scanf("%d",&num);
+
+    for( i = 1; i < 10; i++)
+    {
+        result = num * i ;
+        printf("%d * %d = %d",num,i,result);
+    }
+
+    return 0;
+} */
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for( i =0 ;1; i++ ) //for 무한루프
+    {
+        printf("\n 반복횟수:%d",i); 
+         if ( i > 10 ) 
+            break;
+    }
+
+    return 0;
+} */
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    int result = 0;
+
+    for ( i = 2; i<10; i++)
+    {
+        for (j=1;j<10;j++)
+        {
+            result = i*j;
+            printf("\n %d * %d = %d",i,j,result);
+        }
+        printf("\n ----------------");
+    }
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num, j, result = 0;
+    printf("\n 숫자를 입력하세요:");
+    scanf("%d",&num);
+
+    for (;num>0;num--)
+    {
+        for( j = 9; j > 0 ;j-- )
+        {
+            result = num *j;
+            printf("\n %d * %d = %d",num,j,result);
+        }
+        printf("\n --------------");
+    }
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num = 0;
+    
+    do
+    {
+        printf("%d",num);
+        num++;
+    }while(num < 10); 
+
+    printf("\n 반복문을 종료한 후: num = %d",num);
+
+    return 0;
+    
+} */
+/* //if문은 조건식이 참인 경우 실행
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{       
+    int num;
+    printf("숫자를 입력하세요 : ");
+    scanf("%d", &num);
+
+    if ( num > 0 )
+        printf("양수입니다.\n");
+
+    if ( num == 0 )
+        printf("영입니다.\n");
+
+    if ( num < 0 )
+        printf("음수입니다.\n");
+
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    for (num = 1;num <= 100; num++)
+    {
+        if (num % 5 == 0)
+              printf("%4d",num);
+    }
+    printf("\n");
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int age;
+    
+    printf("\n 나이 입력:");
+    scanf("%d",&age);
+
+    if ( age >= 15 && age <=100 )
+        printf("\n 회원가입이 가능합니다.");
+    else
+        printf("\n 회원가입이 불가능합니다.");
+    
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("\n 숫자입력:");
+    scanf("%d",&num);
+
+    if (num >0)
+        printf("\n 양수");
+    else if (num == 0)
+        printf("\n 0");
+    else 
+        printf("\n 음수");
+
+    return 0;
+} */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("\n c언어 성적입력:");
+    scanf("%d",&num);
+
+    if ( num >= 95)
+        printf("\n A+");
+    else if (num >= 90)
+        printf("\n A");
+    else if (num >= 80)
+        printf("\n B");
+    else if (num >= 70)
+        printf("\n C");
+    else if (num >= 60)
+        printf("\n D");
+    else
+        printf("\n F");
+
+    return 0;
+    } */
+/*
+// switch문은 정수식의 값에 따라 여러 case중 하나를 선택해 수행
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("\n 몇번 메뉴를 선택하시겠습니다?");
+    printf("\n t(1):짜장면");
+    printf("\n t(2):짬뽕");
+    printf("\n t(3):탕수육");
+    printf("\n t(4):만두");
+    printf("\n 번호입력:");
+    scanf("%d",&num);
+
+    printf("---------");
+
+    switch (num)
+    {
+        case 1:
+        printf("\n 짜장면은 5000원입니다");
+        break;
+        case 2:
+        printf("\n 짬뽕은 6000원입니다");
+        break;
+        case 3:
+        printf("\n 탕수육은 8000원입니다");
+        break;
+        case 4:
+        printf("\n 만두는 3000원입니다");
+        break;
+        default:
+        printf("\n 잘못된 번호입니다");
+    }
+
+    printf("\n 감사합니다");
+
+    return 0;
+}
+
+*/
+/* 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+
+    printf("\n 무슨 과일 좋아해?");
+    printf("\nt('A'):사과");
+    printf("\nt('B'):배");
+    printf("\nt('C'):포도");
+    printf("\n('D'):수박");
+    printf("\n 번호 입력:");
+    scanf("%c",&ch);
+
+    printf("\n------");
+
+    switch(ch)
+    {
+        case ('A'):
+        printf("\n 사과는 1000원 입니다");
+        break;
+        case ('B'):
+        printf("\n 배는 500원 입니다");
+        break;
+        case ('C'):
+        printf("\n 포도는 3000원 입니다");
+        break;
+        case ('D'):
+        printf("\n 수박은 2000원 입니다");
+        break;
+        default:
+        printf("\n 없는 과일입니다.");
+
+    }
+printf("\n 감사합니다");
+
+return 0;
+
+}
+*/
+/* //break
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+
+    printf("\n 알파벳 문자를 입력하세요.(종료시에는 q를 입력)");
+
+    for (; ;)
+    {
+        scanf("%c",&ch);
+        if(ch == 'q')
+            break;
+    }
+    printf("\n 프로그램을 종료합니다.");
+
+    return 0;
+
+} */
+/*
+// continue
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    for(num = 0; num <=100; num++)
+    {
+        if (num %2 ==1)
+            continue; //조건식이 참이면 아래문장 실행하지 않고 다음 반복으로 이동
+    }
+    
+    return 0;
+} */
+
