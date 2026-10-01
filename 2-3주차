@@ -1,0 +1,31 @@
+/*
+#include <stdio.h>
+#define size 6
+
+int main()
+{
+	int data[size] = { 18, 62, 31, 57, 8, 3 };
+	int i, j, temp;
+	int index_min;
+
+	for (i = 0; i < size - 1; i++)
+	{
+		index_min = i;
+		for (j = i + 1; j < size; j++)
+		{
+			if (data[index_min] > data[j])
+				index_min = j;
+		}
+		if (i != index_min)
+		{
+			temp = data[i];
+			data[i] = data[index_min];
+			data[index_min] = temp;
+		}
+
+
+
+	}
+
+
+} */ 
