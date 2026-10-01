@@ -1,0 +1,208 @@
+//난수 발생 
+/*
+#include <stdio.h>
+#include <stdlib.h> // 난수발생 헤더파일
+
+int main()
+{
+	int i;
+	for (i = 0; i < 6; i++)
+		printf("%d", rand());
+
+	return 0;
+} */
+ 
+/* a <= 난수 <= b
+a + (rand()%(b-a+1)) */ 
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> //난수발생을 위한 헤더파일
+
+#define MAX 45
+int main()
+{
+	int i;
+
+	srand((unsigned)time(NULL)); //시드값을 타임으로 결정
+	for (i = 0; i < 6; i++)
+		printf("%d", 1 + rand() % MAX); //난수 발생
+
+}
+*/ 
+//동전던지기 게임(난수), 0 <=난수<= 1
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int coin_toss(void);
+
+int main()
+{
+	int toss;
+	int heads = 0;
+	int iails = 0;
+	srand((unsigned)time(NULL));
+
+	for (int i = 0; i < 100; i++)
+	{
+		if (coin_toss() == 1)
+			heads++;
+		else
+			tails++;
+		printf("\n동전의 앞면:%d",heads);
+		printf("\n동전의 뒷면:%d",tails);
+		return 0;
+	}
+}
+
+int coin_toss(void)
+{
+
+}
+*/
+
+//주사위던지기(난수), 1<= 난수 <= 6 
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int roll_dice();
+
+int main()
+{
+	int i;
+	int n_1 = 0;
+	int n_2 = 0;
+	int n_3 = 0;
+	int n_4 = 0;
+	int n_5 = 0;
+	int n_6 = 0;
+
+	srand((unsigned)time(NULL));
+
+	for ( i = 0; i < 100: i++)
+	{
+		switch (roll_dice())
+		{
+		case 1:
+			n_1++;
+			break;
+
+		case 2:
+			n_2++;
+			break;
+
+		case 3:
+			n_3++;
+			break;
+
+		case 4:
+			n_4++;
+			break;
+
+		case 5:
+			n_5++;
+			break;
+
+		case 6:
+			n_6++;
+			break;
+		}
+		printf("")
+		printf("\n 1이 나온 횟수:")
+		return 0;
+	}
+}
+
+int roll_dice()
+{
+	int i = rand()%
+}
+*/ 
+//예제 7-11 : 내림차순
+/*
+#include <stdio.h>
+#define ARR_SIZE 5
+void print_array(int arr[], int size);
+
+
+void print_array(int arr[], int size)
+{
+	int i;
+	for (i = 0; i < size; i++)
+		printf(" %d", arr[i]);
+	printf("\n");
+}
+
+int main()
+{
+	int i, j, temp;
+	int data[ARR_SIZE] = { 52, 31, 28, 17, 46 };
+	int index_min;
+
+	for (i = 0; i < ARR_SIZE - 1; i++)
+	{
+		index_min = i;
+		for (j = i + 1; j < ARR_SIZE; j++)
+		{
+			if (data[index_min] < data[j]) // 오름차순,내림차순 결정
+				index_min = j;
+		}
+		if (i != index_min)
+		{
+			temp = data[i];
+			data[i] = data[index_min];
+			data[index_min] = temp;
+		}
+
+		printf("\n i = %d일때의 정렬 결과:", i);
+		print_array(data, ARR_SIZE);
+	}
+	}
+
+*/ 
+
+//난수발생
+/*
+#include <stdio.h>
+#define ARR_SIZE 5
+void print_array(int arr[], int size);
+
+
+void print_array(int arr[], int size)
+{
+	int i;
+	for (i = 0; i < size; i++)
+		printf(" %d", arr[i]);
+	printf("\n");
+}
+
+int main()
+{
+	int i, j, temp;
+	int data[ARR_SIZE] = { 52, 31, 28, 17, 46 };
+	int index_min;
+
+	for (i = 0; i < ARR_SIZE - 1; i++)
+	{
+		index_min = i;
+		for (j = i + 1; j < ARR_SIZE; j++)
+		{
+			if (data[index_min] < data[j]) // 오름차순,내림차순 결정
+				index_min = j;
+		}
+		if (i != index_min)
+		{
+			temp = data[i];
+			data[i] = data[index_min];
+			data[index_min] = temp;
+		}
+
+		printf("\n i = %d일때의 정렬 결과:", i);
+		print_array(data, ARR_SIZE);
+	} */
+
+
